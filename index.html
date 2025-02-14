@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Meta description for SEO -->
+    <meta name="description" content="A heartfelt love letter for Valentine's Day.">
+    <meta name="keywords" content="Valentine's Day, love letter, romance">
+
+    <!-- Page title -->
     <title>Love Letter to Kika</title>
+    
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="styles/styles.css" />
+    
+    <!-- Favicon for the page -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <script src="script/animation.js"></script>
+    
+    <!-- Link to external JavaScript file for animations -->
+    <script src="script/animation.js" defer></script>
   </head>
 
   <body>
+    <!-- Background music element -->
     <audio loop id="bgm">
       <source src="Se_pa_pou_dat.mp3" type="audio/mpeg" />
     </audio>
+    
+    <!-- Main container -->
     <div id="main">
+      <!-- Love letter content -->
       <div id="letter">
         <p>Happy Valentine's Day, my love! ❤️</p>
         <p>You make my days brighter,</p>
@@ -28,15 +45,23 @@
         <p>I love you, truly,</p>
         <p>Made with LOove, Chris</p>
       </div>
+      
+      <!-- Clock display container -->
       <div id="clock-box">
-        <div id="clock-text">
+        <div id="clock-text" aria-label="Always and Forever">
           <span class="name">Always and Forever</span> ♾️
         </div>
         <div id="clock"></div>
       </div>
+      
+      <!-- Canvas element for additional graphics or animations -->
       <canvas id="canvas"></canvas>
     </div>
+    
+    <!-- Hidden input to store a memorial date -->
     <input type="hidden" id="memorialDate" value="2023-07-08T00:00:00" />
-    <script src="script/app.js"></script>
+    
+    <!-- Link to external JavaScript file for main application logic -->
+    <script src="script/app.js" defer></script>
   </body>
 </html>
