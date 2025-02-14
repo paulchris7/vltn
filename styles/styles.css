@@ -1,3 +1,18 @@
+/* CSS Variables for colors and font sizes */
+:root {
+  --background-color: #ffe;
+  --font-family: "Arial", "Helvetica", sans-serif; /* Updated font family */
+  --font-size-body: 14px;
+  --font-size-p: 27px;
+  --font-size-letter: 16px;
+  --font-size-clock: 28px;
+  --font-size-digit: 64px;
+  --color-letter: #228567;
+  --color-clock-text: gray;
+  --color-clock-name: black;
+}
+
+/* Reset margins and paddings */
 body,
 p,
 #main,
@@ -8,14 +23,18 @@ p,
   padding: 0;
 }
 
+/* Body styles */
 body {
-  background: #ffe;
-  font: 14px/1.4 "微软雅黑", "宋体", sans-serif;
+  background: var(--background-color);
+  font: var(--font-size-body)/1.4 var(--font-family);
 }
 
+/* Paragraph styles */
 p {
-  font-size: 27px;
+  font-size: var(--font-size-p);
 }
+
+/* Main container and canvas styles */
 #main,
 #canvas {
   width: 1100px;
@@ -26,6 +45,7 @@ p {
   position: relative;
 }
 
+/* Love letter styles */
 #letter {
   position: absolute;
   width: 500px;
@@ -33,25 +53,27 @@ p {
   left: 60px;
   top: 80px;
   display: none;
-  font-size: 16px;
-  color: #228567;
+  font-size: var(--font-size-letter);
+  color: var(--color-letter);
 }
 
+/* Clock box styles */
 #clock-box {
   position: absolute;
   left: 60px;
   top: 550px;
-  font-size: 28px;
+  font-size: var(--font-size-clock);
   opacity: 0;
   transition: opacity 0.5s;
 }
 
+/* Clock text styles */
 #clock-text {
-  color: gray;
+  color: var(--color-clock-text);
 }
 
 .name {
-  color: black;
+  color: var(--color-clock-name);
 }
 
 #clock {
@@ -59,5 +81,27 @@ p {
 }
 
 #clock .digit {
-  font-size: 64px;
+  font-size: var(--font-size-digit);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  #main,
+  #canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  #letter {
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+  }
+
+  #clock-box {
+    left: 0;
+    top: auto;
+    bottom: 0;
+  }
 }
